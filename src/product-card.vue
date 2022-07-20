@@ -7,15 +7,15 @@
         <p class="product-card__card-bottom__title">{{title}}</p>
         <p class="product-card__card-bottom__price">{{price}}</p>
         <template v-if="isDiscount">
-            <p class="product-card__card-bottom__discount">
-                {{prevPrice}}
+            <div class="product-card__card-bottom__discount">
+                <p>{{prevPrice}}</p>
                 <span class="product-card__card-bottom__discount-sum">
                     {{discount}}
                 </span>
-            </p>
+            </div>
         </template>
-        <button class="product-card__btn-blue">
-            <template v-if="isDisabled">
+        <button class="product-card__btn-blue" :disabled="isDisabled">
+            <template v-if="!isDisabled">
                 Add to bag
             </template>
             <template v-else>
@@ -90,7 +90,7 @@ export default {
 	 margin-left: 0;
 }
  .product-card p {
-	 margin: 0;
+	 margin: 4px 0;
 }
  .product-card__card-top {
 	 position: relative;
@@ -113,35 +113,41 @@ export default {
 	 font-size: 14px;
 	 font-weight: 600;
 	 color: rgba(0, 0, 0, 0.8);
-	 line-height: 1.4em;
+	 line-height: 1.2em;
 	 overflow: hidden;
 	 box-orient: vertical;
 	 -webkit-box-orient: vertical;
 	 line-clamp: 2;
 	 -webkit-line-clamp: 2;
 	 display: -webkit-box;
-	 padding-right: 1rem;
+	 padding-right: .5rem;
 	 text-overflow: ellipsis;
 }
  .product-card__card-bottom__price {
 	 color: #ed7d45;
 	 font-size: 14px;
-	 font-weight: 600;
-	 line-height: 1.3;
+	 font-weight: 700;
+	 line-height: 1.2;
 }
  .product-card__card-bottom__discount {
-	 color: rgba(0, 0, 0, 0.5);
-	 font-size: 12px;
-	 line-height: 1.3;
+	color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    line-height: 1.2;
+	margin-top: 2px;
+}
+
+.product-card__card-bottom__discount p {
+	text-decoration: line-through;
 }
  .product-card__card-bottom__discount-sum {
-	 padding: 0px 4px;
-	 border-radius: 12px;
-	 line-height: 1;
-	 font-size: 10px;
-	 font-weight: 600;
-	 background: #feb1b4;
-	 color: #f06067;
+	padding: 0px 4px;
+    border-radius: 12px;
+    line-height: 1.5;
+    font-size: 10px;
+    font-weight: 800;
+    margin-left: 4px;
+    background: #feb1b4;
+    color: #f06067;
 }
  .product-card__btn-blue {
 	 width: 100%;
