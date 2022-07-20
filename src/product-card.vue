@@ -133,7 +133,9 @@ export default {
 	color: rgba(0, 0, 0, 0.5);
     font-size: 12px;
     line-height: 1.2;
-	margin-top: 2px;
+	margin-top: -2px;
+	display: flex;
+	align-items: center;
 }
 
 .product-card__card-bottom__discount p {
