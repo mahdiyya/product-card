@@ -1,7 +1,7 @@
 <template>
   <div class="product-card" :class="{small: isSmall}">
     <div class="product-card__card-top" :class="{disabled: isDisabled}">
-        <img src="{{img}}" alt="image judul">
+        <img :src="img" alt="image judul">
     </div>
     <div class="product-card__card-bottom">
         <p class="product-card__card-bottom__title">{{title}}</p>

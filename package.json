@@ -1,10 +1,10 @@
 {
-  "name": "@mahdiyya/product-card",
+  "name": "@mahdiyya/product-card-blibli",
   "version": "0.1.0",
   "description": "Product Card Component using Vue",
   "author": "mahdiyya",
   "repository": {
-    "url": "git://github.com/mahdiyya/product-card.git"
+    "url": "git://github.com/mahdiyya/product-card-blibli.git"
   },
   "main": "dist/product-card.ssr.js",
   "browser": "dist/product-card.esm.js",
