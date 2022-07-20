@@ -144,7 +144,7 @@ export default {
 	 color: #f06067;
 }
  .product-card__btn-blue {
-	 width: calc(100% - 16px);
+	 width: 100%;
 	 font-weight: 600;
 	 padding: 8px;
 	 font-size: 11px;
